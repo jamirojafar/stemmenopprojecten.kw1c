@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS `items` (
 CREATE TABLE IF NOT EXISTS `stemmen` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `item_id` int(111) NOT NULL,
-  `datetime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `tijdstip` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `ip_adres` varchar(25) NOT NULL DEFAULT '0.0.0.0',
   PRIMARY KEY (`id`),
   KEY `item_id` (`item_id`)
