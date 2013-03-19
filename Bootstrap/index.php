@@ -1,3 +1,5 @@
+<!-- Include functie bestand -->
+<?php require_once('assets/php/functions.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -54,112 +56,35 @@
 
 <div class="container">
   <div class="changes">
-    <h1>What's different?</h1>
-    <p class="marketing-byline">How can a fantastic library become any better? Check it out.</p>
+    <h1>Community Week2013</h1>
+    <p class="marketing-byline">Gebruik deze website om op jouw favoriete project te stemmen.</p>
+	<?php
+		if(!allowVoting()){
+			echo "<p class='marketing-byline red-error'>Op dit moment kan er nog niet gestemd worden. Kom terug op 12-04-2013 tussen 11:00 en 14:00.</p>";
+		}
+	?>
     <div class="row">
-      <div class="span3">
-        <h3><a href="./javascript.html#typeahead">Typeahead</a></h3>
-        <p>With the improved typeahead, it's easy to fetch the data using AJAX.</p>
-        <p>It support key/value pairs (objects) next to normal arrays. Also you can convert a <code>&lt;select&gt;</code> to a typeahead.</p>
+      <div class="span12">
+        <h3>Hoe te stemmen?</h3>
+		<p>Stemmen is mogelijk op [datum] tussen [00:00] en [00:00]. Iedereen mag per categorie maximaal een keer stemmen op zijn of haar lievelings project.</p>
+        <p>Hieronder staat beschreven hoe je kan stemmen op jouw favoriete project. Je hebt de mogelijkheid uit drie maniere: stemmen vanuit een overzicht, stemmen door een nummer in te vullen en stemmen via een QR-code.</p>
       </div>
-      <div class="span3">
-        <h3><a href="./javascript.html#inputmask">Input mask</a></h3>
-        <p>Force the user to enter data conform a specific format.</p>
-        <p>Unlike validation, the user can't enter any other key than the ones specified by the mask.</p>
-      </div>
-      <div class="span3">
-        <h3><a href="./javascript.html#rowlink">Row link</a></h3>
-        <p>Don't like when can only click on one column in a table?</p>
-        <p>Row link is a simple javascript plugin that makes the whole row clickable.</p>
-      </div>
-      <div class="span3">
-        <h3><a href="./javascript.html#fileupload">File upload</a></h3>
-        <p>With the file upload plugin you can create visually appealing file or image upload widgets.</p>
-        <p>The image upload widget shows a preview of the selected image even before it's uploaded.</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="span3">
-        <h3><a href="./base-css.html#iconic">Iconic icons</a></h3>
-        <p>The iconic font set adds 170 new icons to Bootstrap. These icons can be used with buttons, menus, links, etc.</p>
-        <p>Because these icons are a font, they can be styled just like text.</p>
-      </div>
-      <div class="span3">
-        <h3><a href="./components.html#page-alerts">Page alerts</a></h3>
-        <p>Know those nice little alerts after you save your profile? With .page-alert the alert will be shown on top op your page.</p>
-      </div>
-      <div class="span3">
-        <h3><a href="./scaffolding.html#semi-fluid-layout">Semi-fluid layout</a></h3>
-        <p>Get the best of both worlds with a semi-fluid layout. It acts as a fixed layout for big screens. For smaller screens, it behaves like a fluid layout.</p>
-      </div>
-      <div class="span3">
-        <h3><a href="./scaffolding.html#row-desktop">Desktop rows</a></h3>
-        <p>By default columns of a row are show next to each other for tablets and desktops and not for phones. A desktop row displays acts like a row for desktops only and not for tablets or phones.</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="span3">
-        <h3><a href="./base-css.html#action-links">Action links</a></h3>
-        <p>Sometimes a button will pull to much attention to an action. In those cases, you can use action links instead.</p>
-        <p>Action links look distinctly different than normal links.</p>
-      </div>
-      <div class="span3">
-        <h3><a href="./base-css.html#forms">Form elements</a></h3>
-        <p>Go beyond uneditable input and create a full uneditable form, with disabled and uneditable elements.</p>
-        <p>Add .editor to a textarea to create a larger field for content editing.</p>
-      </div>
-      <div class="span3">
-        <h3><a href="./base-css.html#forms">Form styles</a></h3>
-        <p>Combine horizontal and vertical forms. Using wells in horizontal forms now looks clean.</p>
-        <p>Use smaller labels to fit more input fields on one screen.</p>
-      </div>
-      <div class="span3">
-        <h3><a href="./components.html#navs">Tabbable</a></h3>
-        <p>Tabs work better than ever. You now have a bordered tabbable available. Also, a container can be turned into a tabbable.</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="span3">
-        <h3><a href="./customize.html">Customize</a></h3>
-        <p>Each customized bootstrap.zip contains a `custom.json` file, which can be used to use the same packages and variables when upgrading.</p>
-        <p>Automatically includes the CSS for jQuery plugins.</p>
-      </div>
-      <div class="span3">
-        <h3><a href="./javascript.html">Download js plugins</a></h3>
-        <p>Download a jQuery plugin directly from the javascript docs, including required CSS.</p>
-      </div>
-      <div class="span3">
-        <h3>More</h3>
-        <ul>
-          <li>Action area for header <code>.header-actions</code></li>
-          <li>Action area for tables <code>.table-actions</code></li>
-          <li>Fixed margin for modal forms</li>
-        </ul>
-      </div>
-    </div><!--/row-->
-  </div>
-
-  <hr class="soften">
-
-  <div class="marketing">
-    <h1>Introducing Bootstrap.</h1>
-    <p class="marketing-byline">Need reasons to love Bootstrap? Look no further.</p>
-
-    <div class="row-fluid">
+	</div>
+	<div class='row'>
       <div class="span4">
-        <h2>By nerds, for nerds.</h2>
-        <p>Built at Twitter by <a href="http://twitter.com/mdo">@mdo</a> and <a href="http://twitter.com/fat">@fat</a>, Bootstrap utilizes <a href="http://lesscss.org">LESS CSS</a>, is compiled via <a href="http://nodejs.org">Node</a>, and is managed through <a href="http://github.com">GitHub</a> to help nerds do awesome stuff on the web.</p>
+        <h3><a href="#">Vanuit het overzicht</a></h3>
+        <p>Om te stemmen vanuit een overzicht met alle projecten kies je bovenaan deze site een categorie. Er zal vervolgens een overzicht worden getoond vanuit waar je kan stemmen op jouw  favoriete project.</p>
       </div>
       <div class="span4">
-        <h2>Made for everyone.</h2>
-        <p>Bootstrap was made to not only look and behave great in the latest desktop browsers (as well as IE7!), but in tablet and smartphone browsers via <a href="./scaffolding.html#responsive">responsive CSS</a> as well.</p>
+        <h3><a href="#">Via het project-nummer</a></h3>
+        <p>Weet je al op welk project je wilt stemmen? Stem dan direct op je favoriete project doormiddel van het invoeren van het project-nummer.</p>
+        <p>Het invoeren van het project-nummer kan je doen via de pagina <a href=''>'Direct Stemmen'</a></p>
       </div>
       <div class="span4">
-        <h2>Packed with features.</h2>
-        <p>A 12-column responsive <a href="./scaffolding.html#gridSystem">grid</a>, dozens of components, <a href="./javascript.html">JavaScript plugins</a>, typography, form controls, and even a <a href="./customize.html">web-based Customizer</a> to make Bootstrap your own.</p>
+        <h3><a href="#">Scan de QR-code</a></h3>
+        <p>Bij elk project hangt een QR-code. Scan deze code met je telefoon of tablet om direct te stemmen op jouw favoriete project.</p>
       </div>
     </div>
-
   </div>
 
 </div>

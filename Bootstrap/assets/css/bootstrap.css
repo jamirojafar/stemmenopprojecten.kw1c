@@ -12,6 +12,11 @@
   *zoom: 1;
 }
 
+.red-error{
+	color: red !important;
+	font-weight: bold !important;
+}
+
 .clearfix:before,
 .clearfix:after {
   display: table;
