@@ -5,4 +5,12 @@
 	function allowVoting(){
 		return false;
 	}
+	
+	function get_header(){
+		require_once('/assets/elements/header.php');	
+	}
+	
+	function get_footer(){
+		require_once('/assets/elements/footer.php');	
+	}
 ?>
