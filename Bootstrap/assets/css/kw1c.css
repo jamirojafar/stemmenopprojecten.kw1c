@@ -4,6 +4,14 @@
 
 }
 
+.span4.item img {
+
+	height: 225px;
+	width: 100%;
+	overflow: hidden;
+
+}
+
 .span4.item .stembalk {
 	
 	position: relative;
