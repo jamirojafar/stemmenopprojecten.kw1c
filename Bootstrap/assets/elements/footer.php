@@ -1,13 +1,11 @@
 
     <!-- Footer
     ================================================== -->
-    <footer class="footer">
+    <footer class="footer">	
       <div class="container">
         <p>Ruimte voor de namen van de beste ontwikkelaars van het Koning Willem I College</p>
       </div>
     </footer>
-
-
 
     <!-- Le javascript
     ================================================== -->

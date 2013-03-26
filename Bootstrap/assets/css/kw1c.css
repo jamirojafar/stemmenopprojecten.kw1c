@@ -1,0 +1,69 @@
+.span4.item {
+
+	margin-top: 10px;
+
+}
+
+.span4.item .stembalk {
+	
+	position: relative;
+	height: 75px;
+	width: 100%;
+	z-index: 1px;
+	background-color: #fed300;
+	margin-top: -75px;
+	
+}
+
+.span4.item .stembox {
+	
+	position: absolute;
+	height: 75px;
+	width: 25%;
+	right: 0px;
+	top: 0px;
+	z-index: 2px;
+	background-color: #ee820f;
+	background-image: url("../images/plus.png");
+	background-size: 64px 64px;
+	background-repeat: no-repeat;
+	background-position: center center; 
+	
+}
+
+.span4.item .stembox.closed {
+	
+	position: absolute;
+	height: 75px;
+	width: 25%;
+	right: 0px;
+	top: 0px;
+	z-index: 2px;
+	background-color: #db001b;
+	background-image: url("../images/lock_wit.png");
+	background-size: 64px 64px;
+	background-repeat: no-repeat;
+	background-position: center center; 
+	
+}
+
+.span4.item .stembalk p {
+	
+	position: absolute;
+	left: 1px;
+	top: 5px;
+	width: 75%;
+	font-size: 20px;
+	color: white;
+	font-weight: bold;
+	
+}
+
+.span4.item .stembox:hover {
+	
+	background-color:#CC3366;
+	opacity:.75;
+	filter: alpha(opacity=75);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+	
+}
