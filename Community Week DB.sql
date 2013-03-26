@@ -1,4 +1,5 @@
-CREATE DATABASE `stemmen`
+CREATE DATABASE `stemmen`;
+USE DATABASE `stemmen`;
 
 CREATE TABLE IF NOT EXISTS `beheerders` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -14,7 +15,12 @@ CREATE TABLE IF NOT EXISTS `items` (
   `afbeelding_bestandsnaam` varchar(25) NOT NULL DEFAULT 'leeg.png',
   `categorie` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+
+INSERT INTO `items` (`id`, `naam`, `beschrijving`, `afbeelding_bestandsnaam`, `categorie`) VALUES
+(1, 'Geld inzamelen voor onderwijs', 'Test', 'kinderen.jpg', 1),
+(2, 'Huiskamer opknappen', '', 'huis.jpg', 1),
+(3, 'Decors maken voor kerstmarkt', '', 'kerstmarkt.jpg', 1);
 
 CREATE TABLE IF NOT EXISTS `stemmen` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
