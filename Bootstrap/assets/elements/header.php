@@ -37,7 +37,7 @@
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active">
-                <a href="/categorie.php?cat=1">Categorie 1</a>
+                <a href="./index.php">Categorie 1</a>
               </li>
 			  <li class="active">
                 <a href="./index.php">Categorie 2</a>
