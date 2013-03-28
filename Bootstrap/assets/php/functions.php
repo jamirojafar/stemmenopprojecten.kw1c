@@ -8,7 +8,7 @@
 	require_once('/assets/php/mysql.php');
 	
 	function allowVoting(){
-		return false;
+		return true;
 	}
 	
 	function get_header(){
@@ -23,14 +23,12 @@
 		echo "<div class=\"span4 item\">";
 		echo "<img src=\"assets/images/".$item["afbeelding_bestandsnaam"]."\" />";
 		echo "<div class=\"stembalk\">";
-		echo "<p>".$item["naam"]."</p>";
-		echo "<a href=\"#\">";
+		echo "<p class='name'>".$item["naam"]."</p>";
 		if(!allowVoting()){
-			echo "<div class=\"stembox closed\"></div>";
+			echo "<div class=\"stembox closed\" ></div>";
 		} else {
-			echo "<div class=\"stembox\"></div>";
+			echo "<div class=\"stembox\" onclick=\"openVoteBox(this,'".$item['id']."','".$item['categorie']."')\"></div>";
 		}
-		echo "</a>";
 		echo "</div>";
 		echo "</div>";
 	}

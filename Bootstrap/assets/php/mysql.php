@@ -7,8 +7,8 @@
 	{
 	
 		$mysqlHostname = "localhost";
-		$mysqlUsername = "root";
-		$mysqlPassword = "";
+		$mysqlUsername = "kw1c";
+		$mysqlPassword = "kw1c";
 		$mysqlDatabase = "stemmen";
 		
 		try {
