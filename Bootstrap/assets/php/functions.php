@@ -5,7 +5,7 @@
 	
 	// 24/03 We includen het MySQL functiebestand hier
 	
-	require_once('/assets/php/mysql.php');
+	require_once('mysql.php');
 	
 	function allowVoting(){
 		return true;

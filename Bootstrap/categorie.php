@@ -41,7 +41,7 @@
 				
 				echo '<div class="row">
 					  <div class="span12">
-						<h3>Dit zijn de inzendingen.</h3>
+						<h3 class="subtitle">Dit zijn de inzendingen.</h3>
 					  </div>
 					</div>
 					';

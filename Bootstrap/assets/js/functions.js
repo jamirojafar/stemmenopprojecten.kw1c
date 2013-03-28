@@ -6,19 +6,25 @@ function openVoteBox(object,id,cat){
 	 
 	 // Maak een post request naar de stem handler
 	 $('#votebox button[name="stem"]').click(function(){
-		$.post("./assets/php/votehandler.php", { itemid: id}).done(function(data) {
-			if(true == true){
+		$.post("./assets/php/votehandler.php", { itemid: id}, function(data) {
+			console.log(data);
+			if(data.result == true){
 				$('#votebox .projectname').html("succesvol uitgebracht");
 				$('#votebox button[name="stem"]').hide();
 				$('#votebox p').html('Dit scherm sluit automatisch, of gebruik onderstaande knop.');
+				$('.row .item').each(function(index){
+					$(this).delay(200*index).fadeOut('slow');
+				});
+				$('h3.subtitle').html("Je hebt al gestemd in deze categorie.");
 				setTimeout(function(){
 					$('#votebox, #overlay').fadeOut('fast');
 				},2000);
 			}
 			else{
-				$('#votebox .projectname').html("Stem mislukt");
+				$('#votebox .projectname').html("mislukt");
+				$('#votebox p').html('Er is iets mis gegaan, probeer het opnieuw.');
 			}
-		});
+		}, "json");
 	});
 }
 
