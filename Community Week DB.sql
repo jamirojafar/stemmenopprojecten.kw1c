@@ -1,5 +1,5 @@
-CREATE DATABASE `stemmen`;
-USE DATABASE `stemmen`;
+CREATE DATABASE IF NOT EXISTS stemmen;
+USE DATABASE stemmen;
 
 CREATE TABLE IF NOT EXISTS `beheerders` (
   `id` int(11) NOT NULL AUTO_INCREMENT,

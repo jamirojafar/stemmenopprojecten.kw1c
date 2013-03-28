@@ -13,13 +13,13 @@
 	
 		// 24/03 We controleren of er een categorie is meegegeven, en deze valide is
 		
-		if(!isset($_GET["id"]) || empty($_GET["id"]))
+		if(!isset($_GET["cat"]) || empty($_GET["cat"]))
 		{
 			echo "Er is geen categorie opgegeven";
 			exit;
 		}
 		
-		if(isset($_GET["id"]) && $_GET["id"] > 3)
+		if(isset($_GET["cat"]) && $_GET["cat"] > 3)
 		{
 			echo "Er is een ongeldige categorie opgegeven";
 			exit;
@@ -34,7 +34,7 @@
 		$pdoConn = openPDOConnection();
 		
 		// Met deze functie halen we "rare" dingen uit het id zodat er geen rare trucjes uitgevoerd kunnen worden, just in case
-		$catId = $pdoConn->quote($_GET["id"]);
+		$catId = $pdoConn->quote($_GET["cat"]);
 		
 	?>
     <div class="row">
