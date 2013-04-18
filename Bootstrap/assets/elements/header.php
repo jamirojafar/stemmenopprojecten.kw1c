@@ -37,16 +37,27 @@
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active">
-                <a href="./index.php">Categorie 1</a>
+                <a href="./categorie.php?cat=1">Categorie 1</a>
               </li>
 			  <li class="active">
-                <a href="./index.php">Categorie 2</a>
+                <a href="./categorie.php?cat=2">Categorie 2</a>
               </li>
 			  <li class="active">
-                <a href="./index.php">Categorie 3</a>
+                <a href="./categorie.php?cat=3">Categorie 3</a>
+              </li>
+			  <li class="active right">
+                <a href="./nummer.php">Via nummer</a>
               </li>
             </ul>
           </div>
         </div>
       </div>
     </div>
+	
+	<!-- Vote box, box wordt geopend wanneer er op de vote knop wordt gedrukt -->
+	<div id='overlay'></div>
+	<div id="votebox">
+		<h2>Stem: <span class='projectname'></span></h2>
+		<p>Weet je zeker dat je wilt stemmen op dit project? Een stem kan niet ongedaan worden gemaakt</p>
+		<button name='stem' class='button'>Stem</button><button name='close' class='button red'>Sluiten</button>
+	</div>

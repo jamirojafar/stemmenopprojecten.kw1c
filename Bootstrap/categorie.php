@@ -4,14 +4,6 @@
 <html lang="en">
 	<!-- De header staat in een centraal bestand, deze verkrijg je met onderstaande functie -->
 	<?php get_header(); ?>
-
-	<!-- Vote box, box wordt geopend wanneer er op de vote knop wordt gedrukt -->
-	<div id='overlay'></div>
-	<div id="votebox">
-		<h2>Stem: <span class='projectname'></span></h2>
-		<p>Weet je zeker dat je wilt stemmen op dit project? Een stem kan niet ongedaan worden gemaakt</p>
-		<button name='stem' class='button'>Stem</button><button name='close' class='button red'>Sluiten</button>
-	</div>
 	
 	<div class="container">
 	  <div class="changes">
