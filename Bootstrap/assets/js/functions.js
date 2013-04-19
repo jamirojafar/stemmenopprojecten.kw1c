@@ -6,7 +6,7 @@ function openVoteBox(object,id,cat){
 	 
 	 // Maak een post request naar de stem handler
 	 $('#votebox button[name="stem"]').click(function(){
-		$.post("./assets/php/votehandler.php", { itemid: id}, function(data) {
+		$.post("./assets/php/votehandler.php", { itemid: id,cat: cat}, function(data) {
 			console.log(data);
 			if(data.result == true){
 				$('#votebox .projectname').html("succesvol uitgebracht");

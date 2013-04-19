@@ -6,9 +6,22 @@
 	// 24/03 We includen het MySQL functiebestand hier
 	
 	require_once('mysql.php');
-	
-	function allowVoting(){
-		return true;
+	// Deze functie zorgt geeft een true of false afhankelijk of de gebruiker nog mag stemmen in de categorie.
+	// @param1 Deze parameter is niet verplicht mee te geven, maar hiermee kan worden gekeken of de gebruiker nog mag stemmen op een individuele categorie pagina
+	// @returns true of false
+	function allowVoting($cat = null){	
+		if($cat == null){
+			return true;
+		}
+		else{
+			// Check of de gebruiker nog mag stemmen in de categorie waar hij zich bevindt
+			if($_COOKIE[$cat] == true){
+				return false;
+			}
+			else{
+				return true;
+			}
+		}
 	}
 	
 	function get_header(){

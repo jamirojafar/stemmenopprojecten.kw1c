@@ -37,13 +37,10 @@
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active">
-                <a href="./categorie.php?cat=1">Categorie 1</a>
+                <a href="./categorie.php?cat=1">Werken aan de wereld</a>
               </li>
 			  <li class="active">
-                <a href="./categorie.php?cat=2">Categorie 2</a>
-              </li>
-			  <li class="active">
-                <a href="./categorie.php?cat=3">Categorie 3</a>
+                <a href="./categorie.php?cat=2">Community week</a>
               </li>
 			  <li class="active right">
                 <a href="./nummer.php">Via nummer</a>
@@ -58,6 +55,13 @@
 	<div id='overlay'></div>
 	<div id="votebox">
 		<h2>Stem: <span class='projectname'></span></h2>
-		<p>Weet je zeker dat je wilt stemmen op dit project? Een stem kan niet ongedaan worden gemaakt</p>
-		<button name='stem' class='button'>Stem</button><button name='close' class='button red'>Sluiten</button>
+		<?php 
+			if(allowVoting($_GET['cat'])){
+				echo "<p>Weet je zeker dat je wilt stemmen op dit project? Een stem kan niet ongedaan worden gemaakt</p>
+		<button name='stem' class='button'>Stem</button><button name='close' class='button red'>Sluiten</button>";
+			}
+			else{
+				echo "<p>Je hebt geen toegang om op dit item te stemmen.</p><button name='close' class='button red'>Sluiten</button>";
+			}
+		?>
 	</div>

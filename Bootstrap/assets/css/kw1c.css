@@ -1,3 +1,7 @@
+body,html{
+	font-family: Arial, Verdana !important;
+}
+
 .span4.item {
 
 	margin-top: 10px;
@@ -190,4 +194,18 @@
 
 ul.nav li.right{
 	border-left: 1px solid white;
+}
+
+.footer{
+	position: relative;
+}
+
+.footer #logos{
+	position: absolute;
+	right: 10px;
+	top: 5px;
+}
+
+.footer #logos img{
+	height: 70px;
 }

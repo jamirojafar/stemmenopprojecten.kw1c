@@ -12,58 +12,61 @@
 		<?php
 		
 			// 24/03 We controleren of er een categorie is meegegeven, en deze valide is
-			if(!allowVoting()){
-				echo "<p class='marketing-byline red-error'>Op dit moment kan er nog niet gestemd worden. Kom terug op 12-04-2013 tussen 11:00 en 14:00.</p>";
-			}
-			if(!isset($_GET["cat"]) || empty($_GET["cat"]))
-			{
-				echo "Er is geen categorie opgegeven";
-			}
-			elseif(isset($_GET["cat"]) && $_GET["cat"] > 3)
-			{
-				echo "Er is een ongeldige categorie opgegeven";
+			if(!allowVoting($_GET['cat'])){
+				echo "<p class='marketing-byline red-error'>Op dit moment kan er nog niet gestemd worden of je hebt al gestemd.</p>";
 			}
 			else{
-				// 24/03 We openen de PDO verbinding met de MySQL database met een handige functie
-				// NOTE ik heb hier even gebruikersnaam kw1c en ww kw1c van gemaakt; mijn wamp had niet zo zin in een root zonder ww kennelijk...
-				$pdoConn = openPDOConnection();
-				
-				// Met deze functie halen we "rare" dingen uit het id zodat er geen rare trucjes uitgevoerd kunnen worden, just in case
-				$catId = $pdoConn->quote($_GET["cat"]);
-				
-				echo '<div class="row">
-					  <div class="span12">
-						<h3 class="subtitle">Dit zijn de inzendingen.</h3>
-					  </div>
-					</div>
-					';
-					
-				// 26/03 We gaan hier de resultaten uit de MySQL database halen.
-				$sqlQuery = "SELECT * FROM items WHERE categorie = ".$catId;
-				
-				$sqlResult = $pdoConn->query($sqlQuery);
-				
-				if($sqlResult->rowCount() > 0)
+				if(!isset($_GET["cat"]) || empty($_GET["cat"]))
 				{
+					echo "Er is geen categorie opgegeven";
+				}
+				elseif(isset($_GET["cat"]) && $_GET["cat"] > 3)
+				{
+					echo "Er is een ongeldige categorie opgegeven";
+				}
+				else{
+					// 24/03 We openen de PDO verbinding met de MySQL database met een handige functie
+					// NOTE ik heb hier even gebruikersnaam kw1c en ww kw1c van gemaakt; mijn wamp had niet zo zin in een root zonder ww kennelijk...
+					$pdoConn = openPDOConnection();
 					
-					echo "<div class='row'>";
+					// Met deze functie halen we "rare" dingen uit het id zodat er geen rare trucjes uitgevoerd kunnen worden, just in case
+					$catId = $pdoConn->quote($_GET["cat"]);
 					
-					foreach($sqlResult as $item)
+					echo '<div class="row">
+						  <div class="span12">
+							<h3 class="subtitle">Dit zijn de inzendingen.</h3>
+						  </div>
+						</div>
+						';
+						
+					// 26/03 We gaan hier de resultaten uit de MySQL database halen.
+					$sqlQuery = "SELECT * FROM items WHERE categorie = ".$catId;
+					
+					$sqlResult = $pdoConn->query($sqlQuery);
+					
+					if($sqlResult->rowCount() > 0)
 					{
+						
+						echo "<div class='row'>";
+						
+						foreach($sqlResult as $item)
+						{
+						
+							renderItem($item);
+						
+						}
+						
+						echo "</div>";
 					
-						renderItem($item);
-					
+					} else {
+						echo "Er zijn geen items in deze categorie";
 					}
 					
-					echo "</div>";
-				
-				} else {
-					echo "Er zijn geen items in deze categorie";
-				}
-				
-				// Sluit de connectie
-				closePDOConnection($pdoConn);
-			}	
+					// Sluit de connectie
+					closePDOConnection($pdoConn);
+				}	
+			}
+			
 		?>	
 	  </div>
 	 </div>
