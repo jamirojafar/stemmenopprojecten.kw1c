@@ -36,7 +36,7 @@
 		echo "<div class=\"span4 item\">";
 		echo "<img src=\"assets/images/".$item["afbeelding_bestandsnaam"]."\" />";
 		echo "<div class=\"stembalk\">";
-		echo "<p class='name'>".$item["naam"]."</p>";
+		echo "<p class='name'><a href=\"#voteInfoBox\" class=\"voteModalLink\" data-toggle=\"modal\">".$item["naam"]."</a></p>";
 		if(!allowVoting()){
 			echo "<div class=\"stembox closed\" ></div>";
 		} else {
