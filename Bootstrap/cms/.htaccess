@@ -1,0 +1,5 @@
+AuthType Basic
+AuthName "Community week cms"
+#Wijzigen naar /var/www/cms
+AuthUserFile "C:\Users\Dirk\Documents\School\PHP\Bootstrap\cms\.htpasswd"
+Require valid-user
