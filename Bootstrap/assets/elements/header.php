@@ -40,7 +40,10 @@
                 <a href="./categorie.php?cat=1">Werken aan de wereld</a>
               </li>
 			  <li class="active">
-                <a href="./categorie.php?cat=2">Community week</a>
+                <a href="./categorie.php?cat=2">Community week [Lorem]</a>
+              </li>
+			  <li class="active">
+                <a href="./categorie.php?cat=3">Community week [Ipsum]</a>
               </li>
 			  <li class="active right">
                 <a href="./nummer.php">Via nummer</a>

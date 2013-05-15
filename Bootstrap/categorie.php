@@ -70,19 +70,6 @@
 		?>	
 	  </div>
 	 </div>
-	 
-	<div id="voteInfoBox" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-			<h3>Informatie</h3>
-		</div>
-		<div class="modal-body">
-			<p>Hier komt informatie over dit project</p>
-		</div>
-		<div class="modal-footer">
-			<a href="#" data-dismiss="modal" aria-hidden="true" class="btn">Sluiten</a>
-		</div>
-    </div>
 
 	<!-- De footer staat in een centraal bestand, deze verkrijg je met onderstaande functie -->
 	<!-- 24/03 We sluiten de PDO verbinding aan het eind van de pagina -->
