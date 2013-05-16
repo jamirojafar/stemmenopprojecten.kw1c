@@ -3,11 +3,11 @@
     ================================================== -->
     <footer class="footer">	
       <div class="container">
-        <p>Ruimte voor de namen van de beste ontwikkelaars van het Koning Willem I College</p>
+        <p>Ontwikkeld door: <a href='https://bitlabs.nl'>Dirk Groenen</a> | Mitchel van Amstel</a></p>
 		<p><?php echo ($_COOKIE['ipad'] == true) ? '<i>Ingelogd als iPad</i>' : '' ;?></p>
 		<div id='logos'>
 			<?php 
-				if($_GET['cat'] == 1){
+				if($_GET['cat'] != 1){
 					echo "<img src='http://www.kw1c.nl/_layout/afbeeldingen/logo.gif' alt='werken aan de wereld logo'/>";
 				}
 				else{
@@ -22,7 +22,6 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="assets/js/jquery.js"></script>
     <script src="assets/js/functions.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/holder/holder.js"></script>

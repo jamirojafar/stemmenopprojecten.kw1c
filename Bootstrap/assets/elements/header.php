@@ -11,6 +11,7 @@
 	<link href="assets/css/kw1c.css" rel="stylesheet">
     <link href="assets/css/docs.css" rel="stylesheet">
     <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -33,17 +34,17 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="./index.html">KW1C</a>
+          <a class="brand" href="./index.php">KW1C</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active">
                 <a href="./categorie.php?cat=1">Werken aan de wereld</a>
               </li>
 			  <li class="active">
-                <a href="./categorie.php?cat=2">Community week [Lorem]</a>
+                <a href="./categorie.php?cat=2">Community week [Project]</a>
               </li>
 			  <li class="active">
-                <a href="./categorie.php?cat=3">Community week [Ipsum]</a>
+                <a href="./categorie.php?cat=3">Community week [Kraam]</a>
               </li>
 			  <li class="active right">
                 <a href="./nummer.php">Via nummer</a>

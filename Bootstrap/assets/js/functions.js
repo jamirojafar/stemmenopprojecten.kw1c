@@ -22,7 +22,7 @@ function openVoteBox(object,id,cat){
 			}
 			else{
 				$('#votebox .projectname').html("mislukt");
-				$('#votebox p').html('Er is iets mis gegaan, probeer het opnieuw.');
+				$('#votebox p').html('Stem niet succesvol doorgevoerd.<br/><i style="color: red;">"'+data.err+'"</i>');
 			}
 		}, "json");
 	});

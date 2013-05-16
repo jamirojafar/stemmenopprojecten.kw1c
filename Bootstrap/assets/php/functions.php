@@ -23,6 +23,26 @@
 			}
 		}
 	}
+
+	function timeToVote(){
+		// Check of de gebruiker op dit tijdstip mag stemmen
+		if(check_in_range('2013-05-24 11:00', '2013-05-24 13:00', date('Y-m-d H:i:s'))){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
+	
+	function check_in_range($start_date, $end_date, $date_from_user){
+		// Convert to timestamp
+		$start_ts = strtotime($start_date);
+		$end_ts = strtotime($end_date);
+		$user_ts = strtotime($date_from_user);
+
+		// Check that user date is between start & end
+		return (($user_ts >= $start_ts) && ($user_ts <= $end_ts));
+	}
 	
 	function get_header(){
 		require_once('/assets/elements/header.php');	
