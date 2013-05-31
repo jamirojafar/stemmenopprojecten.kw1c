@@ -1,8 +1,7 @@
 <?php
-	
+
 	// Basis functie bestand voor MySQL verbinding dmv PDO
 	// Alleen het opzetten en het sluiten van de verbinding gebeurt hier
-	
 	function openPDOConnection()
 	{
 	
@@ -28,5 +27,7 @@
 		$pdoConnection = NULL;
 	
 	}
+	
+	require_once('functions.php');
 	
 ?>

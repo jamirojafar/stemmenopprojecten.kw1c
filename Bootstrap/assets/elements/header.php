@@ -20,6 +20,8 @@
 
     <!-- Le fav and touch icons -->
 	<link rel="shortcut icon" href="assets/ico/favicon.png">
+	
+	
   </head>
 
   <body>
@@ -34,7 +36,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="./index.php">KW1C</a>
+          <a class="brand" href="./index2.php">KW1C</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active">
@@ -42,10 +44,11 @@
               </li>
 			  <li class="active">
                 <a href="./categorie.php?cat=2">Community week [Project]</a>
-              </li>
+              </li><!--
 			  <li class="active">
                 <a href="./categorie.php?cat=3">Community week [Kraam]</a>
               </li>
+			  -->
 			  <li class="active right">
                 <a href="./nummer.php">Via nummer</a>
               </li>
@@ -62,7 +65,7 @@
 		<?php 
 			if(allowVoting($_GET['cat'])){
 				echo "<p>Weet je zeker dat je wilt stemmen op dit project? Een stem kan niet ongedaan worden gemaakt</p>
-		<button name='stem' class='button'>Stem</button><button name='close' class='button red'>Sluiten</button>";
+		<button name='stem' onclick='speel();' class='button'>Stem</button><button name='close' class='button red'>Sluiten</button>";
 			}
 			else{
 				echo "<p>Je hebt geen toegang om op dit item te stemmen.</p><button name='close' class='button red'>Sluiten</button>";

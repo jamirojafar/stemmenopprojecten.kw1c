@@ -13,6 +13,7 @@
 		
 		try {
 			$pdoConnection = new PDO("mysql:host=".$mysqlHostname.";dbname=".$mysqlDatabase, $mysqlUsername, $mysqlPassword);
+			$pdoConnection->exec('SET NAMES "utf8"'); 
 		} catch (PDOException $e) {
 			echo "Er is een fout opgetreden met het opzetten van een PDO Database connectie: ".$e->getMessage();
 			exit;

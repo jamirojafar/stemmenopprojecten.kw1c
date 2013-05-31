@@ -1,4 +1,4 @@
-<?php require_once('assets/php/mysql.php'); ?>
+<?php require_once('assets/php/mysql.php'); loginCheck(); ?>
 <html>
 	<head>
 		<!--Load the AJAX API-->

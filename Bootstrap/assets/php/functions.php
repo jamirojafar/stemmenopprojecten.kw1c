@@ -17,6 +17,7 @@
 			// Check of de gebruiker nog mag stemmen in de categorie waar hij zich bevindt
 			if($_COOKIE[$cat] == true){
 				return false;
+				//return true;
 			}
 			else{
 				return true;
@@ -31,7 +32,9 @@
 		}
 		else{
 			return false;
+			//return true;
 		}
+		//return true;
 	}
 	
 	function check_in_range($start_date, $end_date, $date_from_user){
@@ -45,18 +48,19 @@
 	}
 	
 	function get_header(){
-		require_once('/assets/elements/header.php');	
+		require_once('./assets/elements/header.php');	
 	}
 	
 	function get_footer(){
-		require_once('/assets/elements/footer.php');	
+		require_once('./assets/elements/footer.php');	
 	}
 	
 	function renderItem($item){
 		echo "<div class=\"span4 item\">";
-		echo "<img src=\"assets/images/".$item["afbeelding_bestandsnaam"]."\" />";
+		echo "<a href=\"#voteInfoBox\" class=\"voteModalLink\" onClick=\"getDesc(".$item["id"].")\" ><img src=\"assets/images/".$item["afbeelding_bestandsnaam"]."\" /></a>";
 		echo "<div class=\"stembalk\">";
-		echo "<p class='name'>".$item["naam"]."</p>";
+		//echo "<p class='name'><a href=\"#voteInfoBox\" class=\"voteModalLink\" onClick=\"getDesc(".$item["id"].")\" data-toggle=\"modal\">".$item["naam"]."</a></p>";
+		echo "<p class='name'><a href=\"#voteInfoBox\" class=\"voteModalLink\" onClick=\"getDesc(".$item["id"].")\" >".$item["id"]."<br />".$item["naam"]."</a></p>";
 		if(!allowVoting()){
 			echo "<div class=\"stembox closed\" ></div>";
 		} else {

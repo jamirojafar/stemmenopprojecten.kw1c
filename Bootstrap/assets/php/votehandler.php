@@ -1,7 +1,7 @@
 <?php 
 	require_once('functions.php'); 
 	
-	if(!check_in_range('2013-05-24 11:00', '2013-05-24 13:00', date('Y-m-d H:i:s'))){
+	if(!timeToVote()){
 		$result = array('result' => false,'err'=>'Er mag nog niet worden gestemd. Stemmen kan alleen tussen 11:00 en 13:00 op 24-mei-2013.');
 	}
 	elseif(allowVoting($_REQUEST['cat'])){

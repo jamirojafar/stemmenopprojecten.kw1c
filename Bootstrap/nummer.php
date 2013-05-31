@@ -5,6 +5,24 @@
 	<!-- De header staat in een centraal bestand, deze verkrijg je met onderstaande functie -->
 	<?php get_header(); ?>
 	
+	<script>
+		function getDesc(iid) {
+			
+			$.getJSON( "assets/php/getdetails.php", {
+					id: iid
+				})
+			.done(function( json ) {
+				
+					$('.modalHeader').html(json[0]);
+					$('.modalDescription').html(json[1]);
+					$('#modalVoteBtn').attr('onClick', 'openVoteBox(this, ' + json[2] + ', ' + json[3] + ');');
+					$('#voteInfoBox').modal('show');
+					
+				});
+			
+		}
+	</script>
+	
 	<div class="container">
 	  <div class="changes">
 		<h1>Community Week 2013</h1>
@@ -53,6 +71,20 @@
 		
 	  </div>
 	 </div>
+	 
+	 <div id="voteInfoBox" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			<h3 class="modalHeader">Informatie</h3>
+		</div>
+		<div class="modal-body">
+			<p class="modalDescription">Hier komt informatie over dit project</p>
+		</div>
+		<div class="modal-footer">
+			<a href="#" data-dismiss="modal" aria-hidden="true" class="btn">Sluiten</a>
+			<a href="#" id="modalVoteBtn" data-dismiss="modal" aria-hidden="true" class="btn btn-success">Stemmen!</a>
+		</div>
+    </div>
 
 	<!-- De footer staat in een centraal bestand, deze verkrijg je met onderstaande functie -->
 	<!-- 24/03 We sluiten de PDO verbinding aan het eind van de pagina -->

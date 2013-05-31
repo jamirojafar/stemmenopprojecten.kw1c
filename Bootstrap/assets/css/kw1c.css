@@ -1,5 +1,5 @@
 body,html{
-	font-family: Arial, Verdana !important;
+	 font-family: Verdana, "MS Sans Serif" , Arial, Tahoma !important;
 }
 
 .span4.item {
@@ -10,9 +10,10 @@ body,html{
 
 .span4.item img {
 
-	height: 225px;
+	/*min-height: 225px;*/
 	width: 100%;
 	overflow: hidden;
+	max-height: 245px;
 
 }
 
@@ -66,11 +67,12 @@ body,html{
 	left: 1px;
 	top: 5px;
 	width: 75%;
-	font-size: 20px;
+	font-size: 13px;
 	color: white;
 	font-weight: bold;
 	
 }
+
 
 .span4.item .stembox:hover {
 	
@@ -142,6 +144,10 @@ body,html{
 	}
 }
 
+#votebox a{
+	color: white;
+}
+
 .button {
 	-moz-box-shadow:inset 0px 1px 0px 0px #c1ed9c;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #c1ed9c;
@@ -208,4 +214,16 @@ ul.nav li.right{
 
 .footer #logos img{
 	height: 70px;
+}
+
+.changes {
+
+	margin-top: -60px;
+
+}
+
+.container .changes .pagina-header {
+
+	font-size: 40px;
+
 }
